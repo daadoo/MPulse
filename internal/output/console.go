@@ -7,8 +7,8 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"MPulse/internal/common"
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/common"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // Console 将采集结果以表格形式写入 w。

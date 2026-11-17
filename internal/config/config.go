@@ -12,7 +12,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"MPulse/internal/common"
+	"github.com/daadoo/MPulse/internal/common"
 )
 
 // Config 运行配置。

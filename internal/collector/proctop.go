@@ -4,7 +4,7 @@ import (
 	"context"
 	"sort"
 
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // ProcTopCollector 采集 CPU / 内存 Top N 高占用进程。

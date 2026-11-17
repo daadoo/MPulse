@@ -8,8 +8,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"MPulse/internal/logger"
-	"MPulse/internal/scheduler"
+	"github.com/daadoo/MPulse/internal/logger"
+	"github.com/daadoo/MPulse/internal/scheduler"
 )
 
 // Server 基于 gin 的轻量 HTTP 服务，仅返回 JSON。

@@ -1,4 +1,4 @@
-module MPulse
+module github.com/daadoo/MPulse
 
 go 1.26.3
 

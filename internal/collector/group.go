@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // GroupCollector 按进程名匹配一组进程并汇总资源消耗（nginx / 数据库 / 自定义服务）。

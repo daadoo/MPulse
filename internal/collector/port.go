@@ -7,7 +7,7 @@ import (
 	"github.com/shirou/gopsutil/v4/net"
 	psproc "github.com/shirou/gopsutil/v4/process"
 
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // PortCollector 采集指定端口的监听状态与占用进程资源。

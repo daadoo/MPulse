@@ -14,10 +14,10 @@ import (
 	"syscall"
 	"time"
 
-	"MPulse/internal/config"
-	"MPulse/internal/logger"
-	"MPulse/internal/output"
-	"MPulse/internal/scheduler"
+	"github.com/daadoo/MPulse/internal/config"
+	"github.com/daadoo/MPulse/internal/logger"
+	"github.com/daadoo/MPulse/internal/output"
+	"github.com/daadoo/MPulse/internal/scheduler"
 )
 
 var (

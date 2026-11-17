@@ -9,8 +9,8 @@ import (
 
 	psproc "github.com/shirou/gopsutil/v4/process"
 
-	"MPulse/internal/common"
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/common"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // Collector 单个指标采集器。

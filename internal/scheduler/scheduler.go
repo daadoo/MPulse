@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
-	"MPulse/internal/collector"
-	"MPulse/internal/common"
-	"MPulse/internal/config"
-	"MPulse/internal/logger"
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/collector"
+	"github.com/daadoo/MPulse/internal/common"
+	"github.com/daadoo/MPulse/internal/config"
+	"github.com/daadoo/MPulse/internal/logger"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // Scheduler 采集调度器。

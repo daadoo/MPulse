@@ -13,8 +13,8 @@ import (
 	"github.com/shirou/gopsutil/v4/load"
 	"github.com/shirou/gopsutil/v4/mem"
 
-	"MPulse/internal/logger"
-	"MPulse/internal/model"
+	"github.com/daadoo/MPulse/internal/logger"
+	"github.com/daadoo/MPulse/internal/model"
 )
 
 // HostCollector 采集主机 CPU、内存、交换区与磁盘分区使用率。
