@@ -1,0 +1,35 @@
+# MPulse 配置示例：复制为 config.yaml 后按需修改
+# 优先级：命令行参数 > 配置文件 > 内置默认值
+
+mode: cli                # cli 一次性采集 / daemon 常驻监控
+interval: 30             # daemon 模式采集间隔（秒）
+listen: ":55055"         # HTTP 监听地址
+log_level: info          # debug / info(缺省) / warn / error
+log_file: ""             # 为空则只输出到控制台，如 logs/mpulse.log
+
+top_n: 10                # Top 高占用进程数量
+
+ports:                   # 需要观测的端口
+  - 80
+  - 443
+  - 3306
+
+services:                # 自定义服务进程名，按进程名精确匹配
+  - redis-server
+
+db_processes:            # 数据库进程名，可配置
+  - mysqld
+  - mariadbd
+  - postgres
+  - mongod
+
+nginx_processes:
+  - nginx
+
+ignore_proc:             # 忽略的进程名
+  - systemd
+  - kthreadd
+
+ignore_disk:             # 忽略的挂载点
+  - /boot
+  - /run

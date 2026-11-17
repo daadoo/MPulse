@@ -1,0 +1,14 @@
+# 编译产物
+bin/
+*.exe
+
+# 运行时产物
+logs/
+config.yaml
+
+# IDE
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
