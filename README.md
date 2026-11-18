@@ -1,4 +1,3 @@
-# GFast-V3
 <div align="center">
     <p>
         <h1>MPulse V1.0 服务器系统监控查看工具</h1>
@@ -8,14 +7,14 @@
 ![star](https://gitcode.com/kocie/gfast/star/badge.svg)
 
 ## 工具简介
-* 本项目(MPulse)由<a href="https://gitee.com/moses-studio" target="_blank"><b>Moses 愤怒的天天</b></a>开发。
+* 本项目(MPulse)由<a href="https://github.com/daadoo" target="_blank"><b>Daadoo</b></a> / <a href="https://gitee.com/moses-studio" target="_blank"><b>Moses</b></a>开发。
 * 基于全新Go开发服务器系统性能检查软件,查询所在服务器的CPU占用、内存占用、磁盘空间、高占用进程、数据库进程消耗、Nginx消耗、指定服务和端口消耗。
 * 屏幕打印输出、日志输出
 * 可以作为命令行工具，一次性查询当前系统信息
 * 可以作为服务程序，以后台守护方式持续定时监控系统状态，默认web查询端口55055。
 * 支持WEB接口查询系统信息结果。
 
-需要gin版本后台管理 [https://github.com/qxkjsoft/ginfast](https://github.com/qxkjsoft/ginfast)
+项目路径：https://github.com/daadoo/MPulse
 
 ## 内置功能
 * 查询系统CPU、内存、进程、磁盘使用情况    
@@ -28,6 +27,22 @@
 ```bash
 go build -o bin/mpulse ./cmd
 ```
+
+### 代码变化导致导入包变化，本地更新go.mod
+```bash
+go mod tidy
+```
+
+### 交叉编译(powershell)
+```bash 
+$env:GOOS="linux"; $env:GOARCH="amd64"; $env:CGO_ENABLED="0"; go build -trimpath -ldflags "-s -w" -o bin\mpulse-linux-amd64 ./cmd
+```
+
+```bash
+$env:GOOS="linux"; $env:GOARCH="arm64"; $env:CGO_ENABLED="0"; go build -trimpath -ldflags "-s -w" -o bin\mpulse-linux-amd64 ./cmd
+```
+
+
 
 ### CLI 一次性采集
 ```bash
@@ -43,7 +58,7 @@ go build -o bin/mpulse ./cmd
 ./bin/mpulse -mode daemon -listen :55055 -interval 30 -log-file logs/mpulse.log
 ```
 
-接口：
+## WEB接口：
 
 | 方法 | 路径 | 说明 |
 |---|---|---|
@@ -84,7 +99,7 @@ go build -o bin/mpulse ./cmd
 - 访问日志与采集日志统一走 `internal/logger`，`-log-level debug` 可看到每个采集器与每个 HTTP 请求的耗时。
 
 ## 配置
-项目数据库文件 `resource/data/db.sql` 创建数据库导入后修改配置 `manifest/config/config.yaml.bak` 复制改为`manifest/config/config.yaml`
+修改配置 `config.example.yaml` 复制改为`config/config.yaml`
 
 ## 商用说明
 > 商用注意事项下：
